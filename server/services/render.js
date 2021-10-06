@@ -3,7 +3,7 @@ const axios = require ('axios');
 exports.homeRoutes = (req,res) =>{
     //Make get request to /api/plants
 
-    axios.get('http://localhost:3000/api/plants')
+    axios.get('https://crudappcuttings.herokuapp.com/api/plants')
     .then(function(response){
         res.render('index', {plantes_list : response.data});
     })
@@ -17,7 +17,7 @@ exports.add_plant = (req,res) =>{
 }
 
 exports.update_plant = (req,res) =>{
-    axios.get('http://localhost:3000/api/plants', {params : {id : req.query.id}})
+    axios.get('https://crudappcuttings.herokuapp.com/api/plants', {params : {id : req.query.id}})
     .then(function(plantdata){
         res.render('update_plant',{ plantes_list : plantdata.data})
     })
