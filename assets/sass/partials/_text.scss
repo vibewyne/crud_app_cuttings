@@ -1,0 +1,67 @@
+h1,h2,h3{
+    font-family: "Amatic SC";
+    margin:0;
+    text-align:left
+}
+p, a:not(ul a){
+    font-family:"Poppins" !important;
+    font-size:17px;
+    line-height:25px;
+    margin-bottom:10px;
+}
+label, button{
+    font-size:18px;
+    font-family:"Poppins";
+    margin-bottom:10px;
+}
+input, textarea, option, select{
+    font-family:"Poppins";
+    padding:5px;
+}
+a{
+    color:#fff;
+    text-decoration:none
+}
+small{
+    font-weight:100;
+    font-size:15px
+}
+a:hover{
+    color:#000
+}
+span{
+    color:#fff;
+    font-family:"Poppins"
+}
+h1{
+    font-size:60px;
+    margin:1em 0 2.5rem 0
+}
+h2{
+    font-size:40px;
+    margin:0.4em 0 1.5em 0
+}
+h3{
+    font-size:30px;
+    margin:0.4em 0
+}
+h1, h2, p{
+    text-align:center
+  }
+@media screen and (max-width:1440px){
+    h1{
+        font-size:45px;
+        margin:1em 0 1.5rem 0
+    }
+    h2{
+        font-size:30px;
+        margin:0.4em 0 1.5em 0
+    }
+    h3{
+        font-size:40px;
+        margin:0.4em 0
+    }
+    p, a:not(ul a), label, button{
+        font-size:15px;
+    }
+}

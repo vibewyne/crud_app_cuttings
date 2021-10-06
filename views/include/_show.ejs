@@ -1,0 +1,14 @@
+<% for(var i = 0; i < plantes_list.length; i++) {%>
+    <div class="card <%= plantes_list[i].category %>">
+        <div class="card-content">
+            <div class="card-img"><img src="<%= plantes_list[i].img %>" alt="" onclick="window.open(this.src)"></div>
+            <h3><%= plantes_list[i].name %></h3>
+            <p><%= plantes_list[i].price %>€<br><small>(+frais de port)</small></p>
+            <p><%= plantes_list[i].stock %> disponibles</p>
+            <div class="buttons-edit">
+                <a href="/update_plant?id=<%= plantes_list[i]._id %>" class="buttonlink update updatecss"><i class="fas fa-pencil-alt"></i>Modifier</a>
+                <a href="" data-id="<%= plantes_list[i]._id %>" class="buttonlink deletecss" id="delete"><i class="fas fa-times"></i>Supprimer</a>
+            </div>
+        </div>
+    </div>
+<% } %>

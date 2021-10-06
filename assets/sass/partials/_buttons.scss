@@ -1,0 +1,43 @@
+.buttonlink{
+    display:block;
+    width:fit-content;
+    background-color:$green;
+    color:#fff;
+    padding:20px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    margin:auto;
+    margin-bottom:60px;
+    &:hover{
+        background-color:$gold;
+        color:#fff;
+    }
+}
+.buttonlinkapply{
+    width:fit-content;
+    background-color:$green;
+    border:1px solid #fff;
+    color:#fff;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+    margin:8px 5px;
+    cursor: pointer;
+    &:hover{
+        background-color:#fff;
+        color:#333;
+        border:1px solid #fff
+    }
+}
+.buttonlinkapply.current{
+    background-color:#fff;
+    color:#333;
+    border:1px solid #fff
+}
+.btnAction.buttonlink{
+    border:none;
+    display:block;
+    text-align:center;
+    margin:auto;
+    cursor: pointer;
+}

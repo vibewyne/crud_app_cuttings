@@ -1,0 +1,40 @@
+<section class="home-second-row add-plant">
+
+    <div class="card interieur">
+            <form method="POST" action="api/plants" id="add_plant">
+                <div class="new_plant">
+
+                    <div class="form-group">
+                        <label for="name">Nom :</label>
+                        <input type="hidden" name="id" value="">
+                        <input type="text" name="name" value="" placeholder="Nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Prix :</label>
+                        <input type="number" name="price" value="" placeholder="Prix">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stock">Stock :</label>
+                        <input type="number" name="stock" value="" placeholder="Stock">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Catégorie :</label>
+                        <select id="select-category" name="category">
+                            <option value="interieur">Interieur</option>
+                            <option value="peperomia">Peperomia</option>
+                            <option value="carnivore">Carnivore</option>
+                        </select>
+                    </div>
+
+                    <div class="formgroup">
+                        <button type="submit" class="update buttonlink addcss">Sauvegarder</button>
+                    </div>
+
+                </div>
+            </form>
+    </div>
+
+</section>

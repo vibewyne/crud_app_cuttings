@@ -1,0 +1,139 @@
+.filter-menu{
+  margin-top:50px;
+  background-color:$green;
+  padding:50px 0;
+  div{
+    margin:auto;
+    display: block;
+    width:fit-content;
+    text-align:center
+  }
+  select{
+    border-radius:5px;
+    width:250px;
+    margin-top:10px;
+    display:block
+  }
+}
+.home-second-row {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  position: relative;
+  padding: 20px 5vw;
+  justify-content:flex-start;
+  background: $green;
+  justify-content: space-around;
+  .card {
+    display: flex;
+    width: 23%;
+    margin-bottom:50px;
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      width: 100%;
+      text-align: center;
+      box-shadow: rgba(50, 50, 50, 0.4) 0px 3px 9px 0px;
+      .card-img {
+        margin-top:20px;
+        height:230px;
+        width:230px;
+        img{
+          width:inherit;
+          clip-path:circle(50%);
+          cursor: pointer;
+        }
+      }
+      p {
+        font-weight: 600;
+        padding: 10px 50px 30px 50px;
+        margin: auto;
+      }
+      p:last-child{
+        font-weight:100;
+        background-color:$green;
+        color:#fff;
+        font-size:14px;
+        margin-bottom:30px;
+        border-radius:5px;
+        padding: 10px 20px 10px 20px;
+      }
+      h3 {
+        margin-top: 25px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      a {
+        margin: auto;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .home-second-row {
+    padding: 15vh 5vw;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .home-second-row {
+    padding: 15vh 0;
+    .card {
+      width: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 962px) {
+  .home-second-row {
+    height: auto;
+    margin-top:-1px;
+    flex-direction: column;
+    align-items: center;
+    .card {
+      width: 100vw;
+      .card-content {
+        width: 50vw;
+        margin: 30px auto;
+      }
+    }
+    .card.second {
+      background-color: $green;
+    }
+  }
+}
+@media screen and (max-width: 810px) {
+  .home-second-row {
+    padding: 2vh 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home-first-row{
+     padding:0 70px
+  }
+  .home-second-row {
+    .card {
+      .card-content {
+        width: 55vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .home-first-row{
+    padding:0 25px
+ }
+ .home-second-row .card{
+   margin-bottom:0
+ }
+  .home-second-row .card .card-content {
+    width: 80vw;
+}
+  .filter-menu{
+    padding:20px 0
+  }
+}

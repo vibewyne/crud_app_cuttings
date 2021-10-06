@@ -1,0 +1,48 @@
+<%- include('include/_head') %>
+
+        <section class="home-first-row">
+                <h1>Modifier cette plante</h1>
+                <a href="/" class="buttonlink update gobackcss">Retour</a>
+        </section>
+
+        <section class="home-second-row add-plant">
+
+            <!------------ Un bloc complet ------------>
+        
+            <div class="card interieur">
+                    <form method="POST" id="update_plant">
+
+                            <div class="form-group">
+                                <label for="name">Nom :</label>
+                                <input type="text" name="name" value="<%= plantes_list.name %>" placeholder="">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="price">Prix :</label>
+                                <input type="number" name="price" value="<%= plantes_list.price %>" placeholder="">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="stock">Stock :</label>
+                                <input type="number" name="stock" value="<%= plantes_list.stock %>" placeholder="">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="category">Catégorie :</label>
+                                <select value="<%= plantes_list.category %>" id="select-category" name="category">
+                                    <option value="interieur">Interieur</option>
+                                    <option value="peperomia">Peperomia</option>
+                                    <option value="carnivore">Carnivore</option>
+                                </select>
+                            </div>
+        
+                            <div class="formgroup">
+                                <button type="submit" class="update buttonlink addcss">Sauvegarder</button>
+                            </div>
+        
+                    </form>
+            </div>
+        
+        </section>
+
+<%- include('include/_footer') %>
