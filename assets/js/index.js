@@ -12,7 +12,8 @@ $("#update_plant").on("submit", function (event) {
   })
 
   var request = {
-    "url" : `https://crudappcuttings.herokuapp.com/api/plants/${data.id}`,
+    "url" : `http://localhost:3000/api/plants/${data.id}`,
+    // "url" : `https://crudappcuttings.herokuapp.com/api/plants/${data.id}`,
     "method" : "PUT",
     "data" : data
   }
@@ -28,7 +29,8 @@ if (window.location.pathname == "/") {
     var id = $(this).attr("data-id")
 
     var request = {
-      "url" : `https://crudappcuttings.herokuapp.com/api/plants/${id}`,
+      "url" : `http://localhost:3000/api/plants/${id}`,
+      // "url" : `https://crudappcuttings.herokuapp.com/api/plants/${id}`,
       "method" : "DELETE"
     }
 
