@@ -14,7 +14,7 @@ exports.create = (req, res) => {
     price: req.body.price,
     stock: req.body.stock,
     category: req.body.category,
-    img: req.body.img,
+    image: req.body.image,
   });
 
   // save plant in database

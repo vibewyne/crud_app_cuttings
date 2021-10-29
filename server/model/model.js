@@ -16,6 +16,9 @@ var schema = new mongoose.Schema({
     category : {
         type: String,
         required:true
+    }, image : {
+        type: String,
+        
     }
 })
 
