@@ -60,11 +60,12 @@ exports.update = (req, res) => {
             message: `Cannot update plant with ${id}. maybe plant not found`,
           });
       } else {
+        console.log('data success : ',data);
         res.send(data);
       }
     })
     .catch(err => {
-      res.status(500).send({ message: "Error update plant information" });
+      res.status(500).send({ message: "Error update plant information -> ",err });
     });
 };
 
