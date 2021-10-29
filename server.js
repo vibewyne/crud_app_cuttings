@@ -3,7 +3,9 @@ const dotenv = require('dotenv');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
 const path = require('path');
-const connectDB = require('./server/database/connection')
+const connectDB = require('./server/database/connection');
+const multer  = require('multer');
+const upload = multer({ dest: 'assets/img' });
 const app = express();
 
 dotenv.config({path:'config.env'})
