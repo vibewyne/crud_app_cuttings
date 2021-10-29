@@ -12,7 +12,7 @@ console.log($(this), event.target);
   $.map(unindexed_array, function (n, i) {
     data[n['name']] = n['value']
   })
-console.log('data submit updatePlants ':data, "  id : ",data.id);
+console.log('data submit updatePlants: ',data, "  id : ",data.id);
   var request = {
     // https://crudappcuttings.herokuapp.com
     // http://localhost:3000
