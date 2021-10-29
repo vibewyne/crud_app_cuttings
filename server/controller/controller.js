@@ -21,12 +21,14 @@ exports.create = (req, res) => {
 
   plant
     .save(plant)
-    .then(data => {
-      res.redirect('/')
+    .then((data) => {
+      res.redirect("/");
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
-        message: err.message || "Some error occured during creation",
+        message:
+          "plant save error : " + err.message ||
+          "Some error occured during creation",
       });
     });
 };
@@ -34,10 +36,10 @@ exports.create = (req, res) => {
 //retrieve and return all plants / retrieve and return a single plant
 exports.find = (req, res) => {
   Plantdb.find()
-    .then(plant => {
+    .then((plant) => {
       res.send(plant);
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({
         message: err.message || "Some error occured during  showing",
       });
@@ -52,20 +54,20 @@ exports.update = (req, res) => {
 
   const id = req.params.id;
   Plantdb.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
-    .then(data => {
+    .then((data) => {
       if (!data) {
-        res
-          .status(404)
-          .send({
-            message: `Cannot update plant with ${id}. maybe plant not found`,
-          });
+        res.status(404).send({
+          message: `Cannot update plant with ${id}. maybe plant not found`,
+        });
       } else {
-        console.log('data success : ',data);
+        console.log("data success : ", data);
         res.send(data);
       }
     })
-    .catch(err => {
-      res.status(500).send({ message: "Error update plant information -> ",err });
+    .catch((err) => {
+      res
+        .status(500)
+        .send({ message: "Error update plant information -> ", err });
     });
 };
 
@@ -74,7 +76,7 @@ exports.delete = (req, res) => {
   const id = req.params.id;
 
   Plantdb.findByIdAndDelete(id)
-    .then(data => {
+    .then((data) => {
       if (!data) {
         res.status(404).send({ message: `Cannot delete with id ${id}` });
       } else {
@@ -83,7 +85,7 @@ exports.delete = (req, res) => {
         });
       }
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).send({ message: "Could not delete this plant" });
     });
 };
