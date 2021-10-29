@@ -3,7 +3,7 @@ $("#add_plant").on("submit", function (event) {
 });
 
 $("#update_plant").on("submit", function (event) {
-  var id = window.location.href.split('?')[1];
+  var id = window.location.href.split('?id=')[1];
 console.log('id url >>> ',id);
   event.preventDefault();
 console.log($(this), event.target);
