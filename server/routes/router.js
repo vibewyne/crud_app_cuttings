@@ -2,6 +2,8 @@ const express = require ('express');
 const route = express.Router();
 const services = require('../services/render');
 const controller = require('../controller/controller');
+// const multer  = require('multer');
+// const upload = multer({ dest: 'assets/img' });
 
 //
 route.get("/", services.homeRoutes);
