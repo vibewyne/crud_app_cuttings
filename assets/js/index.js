@@ -3,6 +3,8 @@ $("#add_plant").on("submit", function (event) {
 });
 
 $("#update_plant").on("submit", function (event) {
+  var id = window.location.href.split('?')[1];
+console.log('id url >>> ',id);
   event.preventDefault();
 console.log($(this), event.target);
   var unindexed_array = $(this).serializeArray();
@@ -16,7 +18,7 @@ console.log('data submit updatePlants: ',data, "  id : ",data.id);
   var request = {
     // https://crudappcuttings.herokuapp.com
     // http://localhost:3000
-    "url" : `https://crudappcuttings.herokuapp.com/api/plants/${data.id}`,
+    "url" : `https://crudappcuttings.herokuapp.com/api/plants/${id}`,
     "method" : "PUT",
     "data" : data
   }
